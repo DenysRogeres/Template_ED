@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
+import { Etapa01 } from './pages/Etapa_01'
+import { Etapa02 } from './pages/Etapa_02'
+import { Etapa03 } from './pages/Etapa_03'
+import { Etapa04 } from './pages/Etapa_04'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [page, setPage] = useState(1)
+  
+  /*
+  const [page, setPage] = useState(() => {
+    const savedPage = sessionStorage.getItem('page');
+    return savedPage !== null ? JSON.parse(savedPage) : 1;
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem('page', JSON.stringify(page));
+  }, [page]);
+  */
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      { page == 1 ? <Etapa01 setPage={setPage}/> :
+        page == 2 ? <Etapa02 setPage={setPage}/> : 
+        page == 3 ? <Etapa03 setPage={setPage}/> : <Etapa04 /> }
+      
     </>
   )
 }

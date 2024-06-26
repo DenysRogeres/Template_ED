@@ -1,0 +1,78 @@
+.botaoQuiz {
+   margin: 0.5em 0;
+   width: 90vw;
+   max-width: 540px;
+
+   padding: 0.6em 1.2em;
+
+   background-color: #2BD353;
+   border: none;
+   border-radius: 5px;
+   color: rgb(255, 255, 255); 
+   font-size: 20px; 
+   font-weight: bold;
+
+   cursor: pointer; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+   transition: background-color 0.3s, transform 0.1s;
+}
+
+.botaoQuiz:hover {
+   background-color: #1db842;
+   transform: scale(1.03);
+}
+
+.botaoCheckout {
+   width: 85vw;
+   max-width: 340px;
+
+   padding-bottom: 0.5em;
+   padding-top: 0.5em;
+
+   background-color: #FFA500;
+   border-radius: 20px;
+   color: rgb(255, 255, 255); 
+   font-size: 16px; 
+   font-weight: bold;
+
+   border: 2px solid white;
+
+   cursor: pointer; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+   transition: background-color 0.3s, transform 0.1s;
+
+   -webkit-animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.1);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+
+@media only screen and (max-width: 600px) {
+   .vsl {
+      width: max(90vw, 90%);
+   }
+}
+
+@media only screen and (min-width: 601px) {
+   .vsl {
+      width: 100%;
+   }
+}
+
+.center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
