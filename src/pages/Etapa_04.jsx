@@ -15,16 +15,23 @@ import { Loading } from "./Loading";
 
 
 export function Etapa04() {
-   const [showButton, setShowButton] =  useState(false);
+   //const [showButton, setShowButton] =  useState(false);
    const [showCountdown, setShowCountdown] = useState(false);
-   const [showTempPage, setShowTempPage] = useState(false);
+   //const [showTempPage, setShowTempPage] = useState(false);
 
-   /*const [showTempPage, setShowTempPage] = useState(
-      sessionStorage.getItem('showTempPage') === 'true' || false
-   );*/
+   const [showTempPage, setShowTempPage] = useState(() =>
+      {
+         const savedPage = sessionStorage.getItem('showTempPage');
+         return savedPage !== null ? JSON.parse(savedPage) : true;
+       }
+   );
+
+   const [showButton, setShowButton] = useState(
+      sessionStorage.getItem('showButton') == 'true' || false
+   );
 
   useEffect(() => {
-    const tenMinutes = 10 * 60 * 100; //10 minutos
+    const tenMinutes = 18 * 60 * 1000;;
     const firstVisitTime = localStorage.getItem('firstVisitTime');
 
     if (!firstVisitTime) {
@@ -49,17 +56,14 @@ export function Etapa04() {
 
   useEffect(() => {
 
-      /*setShowTempPage(true);
-      sessionStorage.setItem('showTempPage', true);
-
       const timer = setTimeout(() => {
         setShowTempPage(false);
         sessionStorage.setItem('showTempPage', false);
-      }, 5000); // 5000 milissegundos = 5 segundos
+      }, 4400);
 
       return () => clearTimeout(timer);
 
-      */
+      /*
 
       setShowTempPage(true);
 
@@ -67,7 +71,7 @@ export function Etapa04() {
       setShowTempPage(false);
       }, 4400); 
 
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer);*/
   }, [])
 
 
@@ -101,7 +105,7 @@ export function Etapa04() {
                </div>
                <div className="buttonPresentation">
                   <Botao 
-                     onClick={() => setShowButton(true)}
+                     onClick={() => {setShowButton(true); sessionStorage.setItem('showButton', true)}}
                      title=">>> Watch the free presentation"
                   />
                </div>

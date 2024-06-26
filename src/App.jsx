@@ -6,9 +6,8 @@ import { Etapa03 } from './pages/Etapa_03'
 import { Etapa04 } from './pages/Etapa_04'
 
 function App() {
-  const [page, setPage] = useState(1)
+  //const [page, setPage] = useState(1)
   
-  /*
   const [page, setPage] = useState(() => {
     const savedPage = sessionStorage.getItem('page');
     return savedPage !== null ? JSON.parse(savedPage) : 1;
@@ -17,7 +16,6 @@ function App() {
   useEffect(() => {
     sessionStorage.setItem('page', JSON.stringify(page));
   }, [page]);
-  */
 
   return (
     <>
