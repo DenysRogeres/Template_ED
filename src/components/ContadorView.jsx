@@ -11,7 +11,7 @@ export function ContadorView() {
   };
 
   const getRandomDecrement = () => {
-    const decrements = [1, 1];
+    const decrements = [1, 2];
     return decrements[Math.floor(Math.random() * decrements.length)];
   };
 

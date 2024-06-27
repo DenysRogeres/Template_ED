@@ -8,6 +8,7 @@ import ref_buygoods from '../assets/ref_buygoods.webp';
 import ref_buygoods_blakc from '../assets/ref_buygoods_blakc.webp';
 
 import { VSL } from "../components/Vsl"
+import VSLDinamica from "../components/VSLDinamica";
 import { Botao } from "../components/Botao";
 import { BotaoCheckout } from "../components/BotaoCheckout";
 import { CountdownTimer } from "../components/CountdownTimer";
@@ -31,7 +32,7 @@ export function Etapa04() {
    );
 
   useEffect(() => {
-    const tenMinutes = 19 * 60 * 1000;;
+    const tenMinutes = 0 * 60 * 1000;;
     const firstVisitTime = localStorage.getItem('firstVisitTime');
 
     if (!firstVisitTime) {
@@ -82,7 +83,7 @@ export function Etapa04() {
          
          {showButton == true ? 
          <>
-            {showTempPage ? <Loading /> : <VSL/> }
+            {showTempPage ? <Loading /> : <VSLDinamica/> }
             <div className="buttonCheckout">
                {showCountdown == true ?
                   <>
