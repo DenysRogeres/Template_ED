@@ -17,14 +17,14 @@ import { Loading } from "./Loading";
 export function Etapa04() {
    //const [showButton, setShowButton] =  useState(false);
    const [showCountdown, setShowCountdown] = useState(false);
-   //const [showTempPage, setShowTempPage] = useState(false);
-
+   const [showTempPage, setShowTempPage] = useState(false);
+/*
    const [showTempPage, setShowTempPage] = useState(() =>
       {
          const savedPage = sessionStorage.getItem('showTempPage');
          return savedPage !== null ? JSON.parse(savedPage) : true;
        }
-   );
+   ); */
 
    const [showButton, setShowButton] = useState(
       sessionStorage.getItem('showButton') == 'true' || false
@@ -55,15 +55,14 @@ export function Etapa04() {
   }, []);
 
   useEffect(() => {
-
+/*
       const timer = setTimeout(() => {
         setShowTempPage(false);
         sessionStorage.setItem('showTempPage', false);
       }, 4400);
 
       return () => clearTimeout(timer);
-
-      /*
+*/
 
       setShowTempPage(true);
 
@@ -71,7 +70,7 @@ export function Etapa04() {
       setShowTempPage(false);
       }, 4400); 
 
-      return () => clearTimeout(timer);*/
+      return () => clearTimeout(timer);
   }, [])
 
 
