@@ -32,7 +32,7 @@ export function Etapa04() {
    );
 
   useEffect(() => {
-    const tenMinutes = 19 * 60 * 1000;;
+    const tenMinutes = 22 * 60 * 1000;;
     const firstVisitTime = localStorage.getItem('firstVisitTime');
 
     if (!firstVisitTime) {

@@ -34,7 +34,7 @@ const VSLDinamica = () => {
    t.src=v;s=b.getElementsByTagName(e)[0];
    s.parentNode.insertBefore(t,s)}(window, document,'script',
    'https://connect.facebook.net/en_US/fbevents.js');
-   fbq('init', '1017965596599303');
+   fbq('init', '994500031979030');
    fbq('track', 'PageView');
 
    const noscript = document.createElement('noscript');
@@ -42,7 +42,7 @@ const VSLDinamica = () => {
    img.height = 1;
    img.width = 1;
    img.style.display = 'none';
-   img.src = 'https://www.facebook.com/tr?id=1017965596599303&ev=PageView&noscript=1';
+   img.src = 'https://www.facebook.com/tr?id=994500031979030&ev=PageView&noscript=1';
    noscript.appendChild(img);
    document.head.appendChild(noscript);
 
