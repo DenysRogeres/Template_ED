@@ -9,6 +9,7 @@ import ref_buygoods_blakc from '../assets/ref_buygoods_blakc.webp';
 
 import { VSL } from "../components/Vsl"
 import VSLDinamica from "../components/VSLDinamica";
+import VSLBoostaro from "../components/VSLBostaro";
 import { Botao } from "../components/Botao";
 import { BotaoCheckout } from "../components/BotaoCheckout";
 import { CountdownTimer } from "../components/CountdownTimer";
@@ -83,25 +84,29 @@ export function Etapa04() {
          
          {showButton == true ? 
          <>
-            {showTempPage ? <Loading /> : <VSLDinamica/> }
-            <div className="buttonCheckout">
-               {showCountdown == true ?
-                  <>
-                     <BotaoCheckout />
-                     <div>
-                        <CountdownTimer />
-                     </div>
-                  </>
-               : ''}
-            </div>
+            {showTempPage ? <Loading /> : <VSLBoostaro/> }
+            {/**
+             * 
+             <div className="buttonCheckout">
+                {showCountdown == true ?
+                   <>
+                      <BotaoCheckout />
+                      <div>
+                         <CountdownTimer />
+                      </div>
+                   </>
+                : ''}
+             </div>
+             * 
+             */
+            }
          </> :
             <>
                <div className="headline">
                   <h1>
                      <span className="highlight-red">CONGRATULATIONS!</span>
                   </h1>
-                  <h2>Your answers reveal that your "tool" problems can be fixed up with this little known method. 
-                  <span className="highlight-orange"> Click below now to watch a FREE presentation that reveals how to put you little boy up faster than ever... boost your confidence... and provide the performance of your dreams at any time.</span></h2>
+                  <h2>Your answers show that increasing your size can be easily achieved with this little-known method. Click below now to watch a FREE presentation that reveals <span className="highlight-orange">how to boost your confidence, enhance your performance, and finally get the size you've always desired.</span></h2>
                </div>
                <div className="buttonPresentation">
                   <Botao 
